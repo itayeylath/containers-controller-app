@@ -1,0 +1,5 @@
+/node_modules
+/dist
+/deploy
+/.vscode
+how-to-deploy.md
