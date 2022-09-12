@@ -5,3 +5,5 @@
 how-to-deploy.md
 /heroku-app
 .env
+/src/client/node_modules
+/src/client/src/.env
