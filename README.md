@@ -17,10 +17,7 @@ I choose this project to implement my abilitys...
 ## Link to Design Docs
 Click here
 ## Technologies
-<img src="readme-pics/js.png" width="100" hight="150">
-<img src="readme-pics/ts.png" width="100" hight="150">
-<img src="readme-pics/react.png" width="100" hight="150">
-<img src="readme-pics/sass.png" width="100" hight="150">
+<img src="readme-pics/js.png" width="100" hight="150"><img src="readme-pics/ts.png" width="100" hight="150"><img src="readme-pics/react.png" width="100" hight="150"><img src="readme-pics/sass.png" width="100" hight="150">
 
 ## Execute locally
 
