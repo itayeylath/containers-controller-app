@@ -3,3 +3,5 @@
 /deploy
 /.vscode
 how-to-deploy.md
+/heroku-app
+.env
