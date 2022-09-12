@@ -1,12 +1,11 @@
 # Welcome to containers controller app
-## <a> -> Open the app <- </a>
+## <a> ➡️ Open the app ⬅️ </a>
 <b>Control the information about your 'containers'.</b>
 
 Where are they, who owns them and more...
 
 ## About me
-Highly motivated junior full stack developer. Seeking a full time entry level software
-developer position. strive perform any given task at the highest standard, and
+Highly motivated junior full stack developer. Strive to perform any given task at the highest standard, and
 eager to learn and achieve great accomplishments in the industry.
 
 ## About the project
