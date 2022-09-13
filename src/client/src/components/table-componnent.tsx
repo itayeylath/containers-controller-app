@@ -3,17 +3,17 @@ import { NavLink } from "react-router-dom";
 interface TableProps {
   head: string[];
   body: any;
-  deleteFunc: any;
-  updateFunc: any;
+  handelButtonDelete: any;
+  handelButtonUpdate: any;
 }
 
-const Table = (porps: TableProps) => {
+const Table = (props: TableProps) => {
   return (
     <table>
       {/* Create table header content*/}
       <thead>
         <tr>
-          {porps.head.map((element: string) => {
+          {props.head.map((element: string) => {
             return <th>{element}</th>;
           })}
         </tr>
@@ -21,7 +21,7 @@ const Table = (porps: TableProps) => {
 
       {/* Create table body content */}
       <tbody>
-        {porps.body.map((element: any) => {
+        {props.body.map((element: any) => {
           return (
             <tr>
               <td>
@@ -41,7 +41,7 @@ const Table = (porps: TableProps) => {
               <td>
                 <button
                   onClick={() => {
-                    porps.deleteFunc(element.container_id)
+                    props.handelButtonDelete(element.container_id)
                   }}
                 >
                   Delete
@@ -50,7 +50,7 @@ const Table = (porps: TableProps) => {
               <td>
                 <button
                   onClick={() => {
-                    porps.updateFunc(element);
+                    props.handelButtonUpdate(element);
                   }}
                 >
                   Update

@@ -8,7 +8,9 @@ import {
   reqUpdateContainer,
 } from "../helpers/containers-server-req";
 import { Container } from "../types/containers-table-types";
-import Table from "./table";
+import Table from "./table-componnent";
+import UpdateForm from "./update-form-component";
+import UpdataForm from "./update-form-component";
 
 const ContainerTable = () => {
   // Create states and usestets.
@@ -88,102 +90,16 @@ const ContainerTable = () => {
       </div>
     );
   };
-  // Create update div form.
-  // todo chenge to "UpdateForm"
-  const UpdateDiv = () => {
-    return (
-      <div>
-        <form onSubmit={handelSubmitUpdate}>
-          <input name="container_id" value={updateData!.container_id.toString()} />
-          <input name="model" defaultValue={updateData!.model} />
-          <input
-            name="quantity"
-            defaultValue={updateData!.quantity.toString()}
-          />
-          <input name="size" defaultValue={updateData!.size.toString()} />
-          <input
-            name="manufacturing_year"
-            defaultValue={updateData!.manufacturing_year.toString()}
-          />
-          <input
-            name="location_id"
-            defaultValue={updateData!.location_id.toString()}
-          />
-          <input
-            name="owner_id"
-            defaultValue={updateData!.owner_id.toString()}
-          />
-          <input type="submit" value="Confirm"></input>
-        </form>
-      </div>
-    );
-  };
-  // Create table head content.
-  const TableHead = () => {
-    return(
-    <thead>
-      <tr>
-        <th>id</th>
-        <th>model</th>
-        <th>quantity</th>
-        <th>size</th>
-        <th>manufacturing year</th>
-        <th>location id</th>
-        <th>owner id</th>
-      </tr>
-    </thead>
-)};
-  // Create table body content.
-  const TableBody = () => {
-    return (
-      <tbody>
-        {data.map((element: Container) => { 
-          return (
-            <tr key={element.container_id}>
-              <td>
-                <NavLink to={`/container/${element.container_id}`} key={element.container_id}>
-                  {element.container_id}
-                </NavLink>
-              </td>
-              <td>{element.model}</td>
-              <td>{element.quantity}</td>
-              <td>{element.size}</td>
-              <td>{element.manufacturing_year}</td>
-              <td>{element.location_id}</td>
-              <td>{element.owner_id}</td>
-              <td>
-                <button
-                  onClick={() => {
-                    handelButtonDelete(element.container_id);
-                  }}
-                >
-                  Delete
-                </button>
-              </td>
-              <td>
-                <button
-                  onClick={() => {
-                    handelButtonUpdate(element);
-                  }}
-                >
-                  Update
-                </button>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    );
-  };
-  const headArr: string[] = ["id", "model", "quantity", "size", "manufacturing year", "location id", "owner id"]
-
+  
+  const tableHeadlist: string[] = ["id", "model", "quantity", "size", "manufacturing year", "location id", "owner id"];
+  const formInputList: string[] = ["container_id", "model", "quantity", "size", "manufacturing_year", "location_id", "owner_id"];
   return (
     <div>
       <h2>containers table</h2>
       {<ToolsDiv/>}
       {addButton && <AddDiv />}
-      {updatebutton && <UpdateDiv />}
-      <Table head={headArr} body={data} deleteFunc={handelButtonDelete} updateFunc={handelButtonUpdate} />
+      {updatebutton && <UpdateForm inputs={formInputList} handelSubmitUpdate={handelSubmitUpdate} updateData={updateData}/>}
+      <Table head={tableHeadlist} body={data} handelButtonDelete={handelButtonDelete} handelButtonUpdate={handelButtonUpdate} />
       <Outlet context={data} />
     </div>
   );
