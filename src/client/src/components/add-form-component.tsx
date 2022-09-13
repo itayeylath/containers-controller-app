@@ -11,8 +11,8 @@ const AddForm = (props: AddFormProps) => {
   return (
     <div>
       <form onSubmit={props.handelSubmitAdd}>
-        {arr.map((element: any) => {
-          return <input name={element[0]} placeholder={element[1]} />;
+        {arr.map((element: any, index: number) => {
+          return <input key={index} name={element[0]} placeholder={element[1]} />;
         })}
         <input type="submit" value="Confirm"></input>
       </form>

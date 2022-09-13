@@ -13,18 +13,18 @@ const Table = (props: TableProps) => {
       {/* Create table header content*/}
       <thead>
         <tr>
-          {props.head.map((element: string) => {
-            return <th>{element}</th>;
+          {props.head.map((element: string , index: number) => {
+            return <th key={index}>{element}</th>;
           })}
         </tr>
       </thead>
 
       {/* Create table body content */}
       <tbody>
-        {props.body.map((element: any) => {
+        {props.body.map((element: any, index: number ) => {
           return (
-            <tr>
-              <td>
+            <tr key={index}>
+              <td >
                 <NavLink
                   to={`/container/${element.container_id}`}
                   key={element.container_id}

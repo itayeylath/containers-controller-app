@@ -8,9 +8,9 @@ const UpdateForm = (props: UpdateFormProps) => {
   return (
     <div>
       <form onSubmit={props.handelSubmitUpdate}>
-        {props.inputsNames.map((element: any) => {
+        {props.inputsNames.map((element: string, index: number) => {
           return (
-            <input name={element} defaultValue={props.updateData[element]} />
+            <input key={index} name={element} defaultValue={props.updateData[element]} />
           );
         })}
         <input type="submit" value="Confirm"></input>
