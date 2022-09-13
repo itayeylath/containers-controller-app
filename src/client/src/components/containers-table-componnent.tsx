@@ -8,7 +8,9 @@ import {
   reqUpdateContainer,
 } from "../helpers/containers-server-req";
 import { Container } from "../types/containers-table-types";
+import AddForm from "./add-form-component";
 import Table from "./table-componnent";
+import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
 import UpdataForm from "./update-form-component";
 
@@ -63,42 +65,16 @@ const ContainerTable = () => {
     setAddButton(!addButton);
     setUpdatebutton(false);
   };
-  // Create tools div form.
-  const ToolsDiv = () => {
-    return (
-      <div>
-        <h3>Tools</h3>
-        <button onClick={handelButtonAdd}>Add</button>
-      </div>
-    );
-  };
- // Create add div form.
- // func handle submit inside the componnent
-  const AddDiv = () => {
-    return (
-      <div>
-        <form onSubmit={handelSubmitAdd}>
-          <input name="container_id" placeholder="id" />
-          <input name="model" placeholder="Model" />
-          <input name="quantity" placeholder="quantity" />
-          <input name="size" placeholder="size" />
-          <input name="manufacturing_year" placeholder="manufacturing year" />
-          <input name="location_id" placeholder="location id" />
-          <input name="owner_id" placeholder="owner id" />
-          <input type="submit" value="Confirm"></input>
-        </form>
-      </div>
-    );
-  };
   
   const tableHeadlist: string[] = ["id", "model", "quantity", "size", "manufacturing year", "location id", "owner id"];
   const formInputList: string[] = ["container_id", "model", "quantity", "size", "manufacturing_year", "location_id", "owner_id"];
+
   return (
     <div>
       <h2>containers table</h2>
-      {<ToolsDiv/>}
-      {addButton && <AddDiv />}
-      {updatebutton && <UpdateForm inputs={formInputList} handelSubmitUpdate={handelSubmitUpdate} updateData={updateData}/>}
+      <ToolsBar  handelButtonAdd={handelButtonAdd}/>
+      {addButton && <AddForm inputsNames={formInputList} placeholdersNames={tableHeadlist} handelSubmitAdd={handelSubmitAdd}/>}
+      {updatebutton && <UpdateForm inputsNames={formInputList} handelSubmitUpdate={handelSubmitUpdate} updateData={updateData}/>}
       <Table head={tableHeadlist} body={data} handelButtonDelete={handelButtonDelete} handelButtonUpdate={handelButtonUpdate} />
       <Outlet context={data} />
     </div>
