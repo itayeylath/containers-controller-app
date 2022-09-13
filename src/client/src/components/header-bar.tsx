@@ -7,17 +7,20 @@ class HeaderBar extends React.Component {
   render() {
     return (
       <div className="App">
-        <div> Socks project </div>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/socks`}>
-          Socks table
+        <div> containers controller app </div>
+        <Link style={{ display: "block", margin: "1rem 0" }} to={`/containers`}>
+          containers table
         </Link>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/officers`}>
-          Officers table
+        <Link style={{ display: "block", margin: "1rem 0" }} to={`/owners`}>
+          owners table
         </Link>
         <Link style={{ display: "block", margin: "1rem 0" }} to={`/locations`}>
           Location table
         </Link>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/locationsHistory`}>
+        <Link
+          style={{ display: "block", margin: "1rem 0" }}
+          to={`/locationsHistory`}
+        >
           Locations history table
         </Link>
         <Outlet />

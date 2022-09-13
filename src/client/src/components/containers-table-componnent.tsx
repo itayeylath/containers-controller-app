@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { idText } from "typescript";
 import {
   reqGetContainers,
   reqAddContainer,
@@ -7,8 +8,9 @@ import {
   reqUpdateContainer,
 } from "../helpers/containers-server-req";
 import { Container } from "../types/containers-table-types";
+import Table from "./table";
 
-const SockTable = () => {
+const ContainerTable = () => {
   // Create states and usestets.
   const [data, setData] = useState<Container[] | []>([]);
   const [isDelete, setIsDelete] = useState<boolean>(true);
@@ -135,12 +137,11 @@ const SockTable = () => {
   const TableBody = () => {
     return (
       <tbody>
-        {data.map((element: Container) => {
-          const values = Object.values(element) 
+        {data.map((element: Container) => { 
           return (
             <tr key={element.container_id}>
               <td>
-                <NavLink to={`/socks/${element.container_id}`} key={element.container_id}>
+                <NavLink to={`/container/${element.container_id}`} key={element.container_id}>
                   {element.container_id}
                 </NavLink>
               </td>
@@ -174,20 +175,18 @@ const SockTable = () => {
       </tbody>
     );
   };
+  const headArr: string[] = ["id", "model", "quantity", "size", "manufacturing year", "location id", "owner id"]
 
   return (
     <div>
-      <h2>Socks table</h2>
+      <h2>containers table</h2>
       {<ToolsDiv/>}
       {addButton && <AddDiv />}
       {updatebutton && <UpdateDiv />}
-      <table>
-        {<TableHead/>}
-        {<TableBody/>}
-      </table>
+      <Table head={headArr} body={data} deleteFunc={handelButtonDelete} updateFunc={handelButtonUpdate} />
       <Outlet context={data} />
     </div>
   );
 };
 
-export default SockTable;
+export default ContainerTable;

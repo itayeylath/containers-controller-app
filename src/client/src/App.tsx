@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./styles/App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HeaderBar from "./components/header-bar";
-import SockTable from "./components/containers-table-componnent";
 import axios from "axios";
 import OfficerTable from "./components/owners-table-componnent";
 import LocationsTable from "./components/locations-table-componnent";
@@ -10,6 +9,7 @@ import LocationsHistoryTable from "./components/locations-history-table-componne
 import { Officer } from "./types/officer-table-types";
 import { LocationHistory } from "./types/locations-history-table-types";
 import { Location } from "./types/locations-table-types";
+import ContainerTable from "./components/containers-table-componnent";
 
 const App = () => {
   // const [socks, setSocks] = useState<Sock[] | []>([]);
@@ -54,9 +54,9 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HeaderBar />}>
-          <Route path="/socks" element={<SockTable/>} />
+          <Route path="/containers" element={<ContainerTable/>} />
           <Route
-            path="/officers"
+            path="/owners"
             element={<OfficerTable officers={officers} />}
           />
           <Route
