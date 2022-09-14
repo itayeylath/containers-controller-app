@@ -1,61 +1,116 @@
-import React from "react";
-import { NavLink, Outlet} from "react-router-dom";
-import { Officer, OfficerTableProps } from "../types/officer-table-types";
+import { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+import {
+  reqGetContainers,
+  reqAddContainer,
+  reqDeleteContainer,
+  reqUpdateContainer,
+} from "../helpers/containers-server-req";
+import { Container } from "../types/containers-table-types";
+import AddForm from "./add-form-component";
+import Table from "./table-componnent";
+import ToolsBar from "./tools-bar-componnent";
+import UpdateForm from "./update-form-component";
+import "../styles/containers-table-componnent.scss";
 
-class OfficerTable extends React.Component<OfficerTableProps> {
-  state = {};
+const OwnersTable = () => {
+  // Constant variables.
+  const tableHeadlist: string[] = [
+    "id",
+    "name",
+    "email",
+    "phone number"
+  ];
+  const formInputList: string[] = [
+    "owner_id",
+    "name",
+    "email",
+    "phone number",
+  ];
+  // Create states and usestets.
+  const [data, setData] = useState<Container[] | []>([]);
+  const [isDelete, setIsDelete] = useState<boolean>(true);
+  const [isAdd, setIsAdd] = useState<boolean>(true);
+  const [isUpdate, setIsUpdate] = useState<boolean>(false);
+  const [addButton, setAddButton] = useState<boolean>(false);
+  const [updatebutton, setUpdatebutton] = useState<boolean>(false);
+  const [updateData, setUpdateData] = useState<Container | undefined>();
 
-  render() {
-    // Create table body content.
-    const tableBody = this.props.officers.map((element: Officer) => {
-      return (
-        <tbody key={element.officer_id}>
-          <tr>
-            <td>
-              <NavLink
-                to={`/officers/${element.officer_id}`}
-                key={element.officer_id}
-              >
-                {element.officer_id}
-              </NavLink>
-            </td>
-            <td>{element.name}</td>
-            <td>{element.army_identity_number}</td>
-            <td>{element.email}</td>
-            <td>{element.phone_number}</td>
-            <td>
-              <button>Delete</button>
-            </td>
-            <td>
-              <button>Update</button>
-            </td>
-          </tr>
-        </tbody>
-      );
+  // Request from the server for initial data and when delete/add/update happen.
+  useEffect(() => {
+    reqGetContainers().then((result) => {
+      setData(result);
     });
-    // Create table head content.
-    const tableHead = (
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>name</th>
-          <th>army identity number</th>
-          <th>email</th>
-          <th>phone number</th>
-        </tr>
-      </thead>
-    );
-    return (
-      <div>
-        <h2>officers table</h2>
-        <table>
-          {tableHead}
-          {tableBody}
-        </table>
-        <Outlet context={this.props.officers} />
-      </div>
-    );
-  }
-}
+  }, [isDelete, isAdd, isUpdate]);
 
-export default OfficerTable;
+  // Submit form data to server for add.
+  const handelSubmitAdd = async (event: any) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    // Server request.
+    await reqAddContainer(Object.fromEntries(data) as unknown as Container);
+    setIsAdd(!isAdd);
+  };
+  // Submit form data to server for update.
+  const handelSubmitUpdate = async (event: any) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(event.target));
+    // Server request.
+    await reqUpdateContainer(data as unknown as Container);
+    setIsUpdate(!isUpdate);
+  };
+  // Click on update button.
+  const handelButtonUpdate = async (element: Container) => {
+    setUpdateData(element);
+    setUpdatebutton(!updatebutton);
+    setAddButton(false);
+  };
+  // Click on delete button.
+  const handelButtonDelete = async (id: number) => {
+    // Server request.
+    await reqDeleteContainer(id);
+    setIsDelete(!isDelete);
+  };
+
+  // Click on add button.
+  const handelButtonAdd = () => {
+    setAddButton(!addButton);
+    setUpdatebutton(false);
+  };
+
+  return (
+    <div className="Main">
+      <h2>containers table</h2>
+      <div className="Table">
+        <div className="ToolsBar">
+          <ToolsBar handelButtonAdd={handelButtonAdd} />
+        </div>
+        <div className="HiddenDivs">
+          {addButton && (
+            <AddForm
+              inputsNames={formInputList}
+              placeholdersNames={tableHeadlist}
+              handelSubmitAdd={handelSubmitAdd}
+            />
+          )}
+          {updatebutton && (
+            <UpdateForm
+              inputsNames={formInputList}
+              handelSubmitUpdate={handelSubmitUpdate}
+              updateData={updateData}
+            />
+          )}
+        </div>
+        <Table
+          head={tableHeadlist}
+          body={data}
+          handelButtonDelete={handelButtonDelete}
+          handelButtonUpdate={handelButtonUpdate}
+        />
+      </div>
+      <Outlet context={data} />
+    </div>
+  );
+};
+
+export default OwnersTable;

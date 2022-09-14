@@ -89,23 +89,23 @@ const ContainerTable = () => {
       <h2>containers table</h2>
       <div className="Table">
         <div className="ToolsBar">
-         <ToolsBar handelButtonAdd={handelButtonAdd} />
+          <ToolsBar handelButtonAdd={handelButtonAdd} />
         </div>
         <div className="HiddenDivs">
-        {addButton && (
-          <AddForm
-            inputsNames={formInputList}
-            placeholdersNames={tableHeadlist}
-            handelSubmitAdd={handelSubmitAdd}
-          />
-        )}
-        {updatebutton && (
-          <UpdateForm
-            inputsNames={formInputList}
-            handelSubmitUpdate={handelSubmitUpdate}
-            updateData={updateData}
-          />
-        )}
+          {addButton && (
+            <AddForm
+              inputsNames={formInputList}
+              placeholdersNames={tableHeadlist}
+              handelSubmitAdd={handelSubmitAdd}
+            />
+          )}
+          {updatebutton && (
+            <UpdateForm
+              inputsNames={formInputList}
+              handelSubmitUpdate={handelSubmitUpdate}
+              updateData={updateData}
+            />
+          )}
         </div>
         <Table
           head={tableHeadlist}

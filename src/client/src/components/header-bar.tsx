@@ -7,12 +7,12 @@ class HeaderBar extends React.Component {
   render() {
     return (
       <div className="HeaderBar">
-        <h1> containers controller app </h1>
         <div className="Bar">
         <Link to={`/containers`}>containers table</Link>
         <Link to={`/owners`}>owners table</Link>
         <Link to={`/locations`}>Location table</Link>
         <Link to={`/locationsHistory`}>Locations history table</Link>
+        <Link to={`/`}>Home page</Link>
         </div>
         <Outlet />
       </div>
