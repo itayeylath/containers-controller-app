@@ -11,7 +11,7 @@ const app: Express = express();
 app.use(cors());
 app.use(json());
 app.use(express.json({limit: '1mb'}));
-const root: string = path.join(process.cwd(), 'dist');
+const root: string = path.join(process.cwd(), './client');
 app.use(express.static(root));
 
 app.get('/', (_req, res) => {
