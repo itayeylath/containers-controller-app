@@ -3,5 +3,5 @@ export interface LocationHistory {
   arrival_date: string;
   departure_date: string;
   location_id: number;
-  sock_id: number;
+  container_id: number;
 }

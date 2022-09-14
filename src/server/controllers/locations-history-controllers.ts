@@ -14,12 +14,21 @@ export const addNewLocationHistory: RequestHandler = async (req, res) => {
     res.sendStatus(500);
   }
 };
+// arrival_date: 2021-02-01T22:00:00.000Z,
+// departure_date: 2022-03-03T22:00:00.000Z,
 
 // Get all locations history from DB.
 export const getAllLocationsHistory: RequestHandler = async (_req, res) => {
   try {
     const sql = "SELECT * FROM locations_history";
     const object = await client.query(sql);
+    // Modify dates.
+    object.rows.forEach((element: any) => {
+      element.arrival_date = element.arrival_date.toISOString().split("T")[0];
+      element.departure_date = element.departure_date
+        .toISOString()
+        .split("T")[0];
+    });
     res.send(object.rows);
   } catch {
     res.sendStatus(500);

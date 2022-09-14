@@ -2,10 +2,10 @@ import path from 'path';
 import express, { Express } from 'express';
 import cors from 'cors';
 import { json } from 'body-parser';
-import ownersRouter from "./routs/owners-routs"
-import locationsRouter from "./routs/locations-routs"
-import containersRouter from "./routs/containers-routs"
-import locationsHistoryRouter from "./routs/loctions-history-routs"
+import ownersRouter from "./routes/owners-routs"
+import locationsRouter from "./routes/locations-routs"
+import containersRouter from "./routes/containers-routs"
+import locationsHistoryRouter from "./routes/loctions-history-routs"
 
 const app: Express = express();
 app.use(cors());
