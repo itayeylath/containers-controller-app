@@ -1,1 +1,2 @@
-web: node /app/server/server.js
+ggweb: node /app/server/server.js
+containers
