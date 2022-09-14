@@ -6,7 +6,7 @@ import {
   reqDeleteContainer,
   reqUpdateContainer,
 } from "../helpers/containers-server-req";
-import { Container } from "../types/containers-table-types";
+import { Container } from "../types/containers-types";
 import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
@@ -110,6 +110,7 @@ const LocationsTable = () => {
         <Table
           head={tableHeadlist}
           body={data}
+          elementTypes={formInputList}
           handelButtonDelete={handelButtonDelete}
           handelButtonUpdate={handelButtonUpdate}
         />

@@ -1,54 +1,41 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import {
-  reqGetContainers,
-  reqAddContainer,
-  reqDeleteContainer,
-  reqUpdateContainer,
-} from "../helpers/containers-server-req";
-import { Container } from "../types/containers-table-types";
 import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
-import "../styles/containers-table-componnent.scss";
+import {
+  reqAddOwner,
+  reqDeleteOwner,
+  reqGetOwners,
+  reqUpdateOwner,
+} from "../helpers/owners-server-req";
+import { Owner } from "../types/owners-types";
 
 const OwnersTable = () => {
   // Constant variables.
-  const tableHeadlist: string[] = [
-    "id",
-    "name",
-    "email",
-    "phone number"
-  ];
-  const formInputList: string[] = [
-    "owner_id",
-    "name",
-    "email",
-    "phone number",
-  ];
+  const tableHeadlist: string[] = ["id", "name", "email", "phone number"];
+  const formInputList: string[] = ["owner_id", "name", "email", "phone_number"];
   // Create states and usestets.
-  const [data, setData] = useState<Container[] | []>([]);
+  const [data, setData] = useState<Owner[] | []>([]);
   const [isDelete, setIsDelete] = useState<boolean>(true);
   const [isAdd, setIsAdd] = useState<boolean>(true);
   const [isUpdate, setIsUpdate] = useState<boolean>(false);
   const [addButton, setAddButton] = useState<boolean>(false);
   const [updatebutton, setUpdatebutton] = useState<boolean>(false);
-  const [updateData, setUpdateData] = useState<Container | undefined>();
-
+  const [updateData, setUpdateData] = useState<Owner | undefined>();
   // Request from the server for initial data and when delete/add/update happen.
   useEffect(() => {
-    reqGetContainers().then((result) => {
+    reqGetOwners().then((result) => {
       setData(result);
     });
   }, [isDelete, isAdd, isUpdate]);
-
   // Submit form data to server for add.
   const handelSubmitAdd = async (event: any) => {
     event.preventDefault();
     const data = new FormData(event.target);
     // Server request.
-    await reqAddContainer(Object.fromEntries(data) as unknown as Container);
+    await reqAddOwner(Object.fromEntries(data) as unknown as Owner);
     setIsAdd(!isAdd);
   };
   // Submit form data to server for update.
@@ -56,11 +43,11 @@ const OwnersTable = () => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target));
     // Server request.
-    await reqUpdateContainer(data as unknown as Container);
+    await reqUpdateOwner(data as unknown as Owner);
     setIsUpdate(!isUpdate);
   };
   // Click on update button.
-  const handelButtonUpdate = async (element: Container) => {
+  const handelButtonUpdate = async (element: Owner) => {
     setUpdateData(element);
     setUpdatebutton(!updatebutton);
     setAddButton(false);
@@ -68,10 +55,9 @@ const OwnersTable = () => {
   // Click on delete button.
   const handelButtonDelete = async (id: number) => {
     // Server request.
-    await reqDeleteContainer(id);
+    await reqDeleteOwner(id);
     setIsDelete(!isDelete);
   };
-
   // Click on add button.
   const handelButtonAdd = () => {
     setAddButton(!addButton);
@@ -80,7 +66,7 @@ const OwnersTable = () => {
 
   return (
     <div className="Main">
-      <h2>containers table</h2>
+      <h2>Owners table</h2>
       <div className="Table">
         <div className="ToolsBar">
           <ToolsBar handelButtonAdd={handelButtonAdd} />
@@ -104,6 +90,7 @@ const OwnersTable = () => {
         <Table
           head={tableHeadlist}
           body={data}
+          elementTypes={formInputList}
           handelButtonDelete={handelButtonDelete}
           handelButtonUpdate={handelButtonUpdate}
         />

@@ -1,8 +1,7 @@
-import { NavLink } from "react-router-dom";
-
 interface TableProps {
   head: string[];
   body: any;
+  elementTypes: any;
   handelButtonDelete: any;
   handelButtonUpdate: any;
 }
@@ -13,7 +12,7 @@ const Table = (props: TableProps) => {
       {/* Create table header content*/}
       <thead>
         <tr>
-          {props.head.map((element: string , index: number) => {
+          {props.head.map((element: string, index: number) => {
             return <th key={index}>{element}</th>;
           })}
         </tr>
@@ -21,27 +20,16 @@ const Table = (props: TableProps) => {
 
       {/* Create table body content */}
       <tbody>
-        {props.body.map((element: any, index: number ) => {
+        {props.body.map((element: any, index: number) => {
           return (
             <tr key={index}>
-              <td >
-                <NavLink
-                  to={`/container/${element.container_id}`}
-                  key={element.container_id}
-                >
-                  {element.container_id}
-                </NavLink>
-              </td>
-              <td>{element.model}</td>
-              <td>{element.quantity}</td>
-              <td>{element.size}</td>
-              <td>{element.manufacturing_year}</td>
-              <td>{element.location_id}</td>
-              <td>{element.owner_id}</td>
+              {props.elementTypes.map((type: any, index: number) => {
+                return <td key={index}>{element[type]}</td>;
+              })}
               <td>
                 <button
                   onClick={() => {
-                    props.handelButtonDelete(element.container_id)
+                    props.handelButtonDelete(element[props.elementTypes[0]]);
                   }}
                 >
                   Delete
@@ -56,7 +44,6 @@ const Table = (props: TableProps) => {
                   Update
                 </button>
               </td>
-              
             </tr>
           );
         })}

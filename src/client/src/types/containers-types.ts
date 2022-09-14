@@ -8,6 +8,3 @@ export interface Container {
   quantity: number;
 }
 
-export interface SockTableProps {
-  containers: Container[];
-  }

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Container } from "../types/containers-table-types";
+import { Container } from "../types/containers-types";
 
 //All requests from the server to CRUD (create,read,update,delete)- containers.
 export const reqAddContainer = async (data: Container) => {
