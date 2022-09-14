@@ -1,0 +1,73 @@
+$lfs-yellow: rgb(0, 0, 0);
+h1{
+  margin:auto;
+  padding: 25px;
+}
+h2{
+  margin:auto;
+  padding: 25px;
+}
+.Table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $lfs-yellow;
+    text-align: center;
+  }
+  thead {
+    border-top: 2px solid $lfs-yellow;
+    border-bottom: 2px solid $lfs-yellow;
+    th {
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px;
+      color: $lfs-yellow;
+      border: 1px solid #f1f1f1;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #f1f1f1;
+      color: $lfs-yellow;
+      td {
+        padding: 10px;
+        border: 1px solid #f1f1f1;
+      }
+      th {
+        padding-left: 10px;
+        border: 1px solid #f1f1f1;
+      }
+    }
+  }
+}
+
+.Main{
+  display: flex;
+  flex-direction: column;
+}
+
+.ToolsBar{
+  padding: 50px;
+  justify-content:center
+;
+}
+
+.HeaderBar{
+  display: flex;
+  flex-direction: column;
+}
+
+.Bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.HiddenDivs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

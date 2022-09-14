@@ -1,28 +1,19 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import "../styles/containers-table-componnent.scss";
 class HeaderBar extends React.Component {
   state = {};
 
-  // TODO: Chenge styles.
   render() {
     return (
-      <div className="App">
-        <div> containers controller app </div>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/containers`}>
-          containers table
-        </Link>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/owners`}>
-          owners table
-        </Link>
-        <Link style={{ display: "block", margin: "1rem 0" }} to={`/locations`}>
-          Location table
-        </Link>
-        <Link
-          style={{ display: "block", margin: "1rem 0" }}
-          to={`/locationsHistory`}
-        >
-          Locations history table
-        </Link>
+      <div className="HeaderBar">
+        <h1> containers controller app </h1>
+        <div className="Bar">
+        <Link to={`/containers`}>containers table</Link>
+        <Link to={`/owners`}>owners table</Link>
+        <Link to={`/locations`}>Location table</Link>
+        <Link to={`/locationsHistory`}>Locations history table</Link>
+        </div>
         <Outlet />
       </div>
     );

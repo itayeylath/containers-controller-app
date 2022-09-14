@@ -11,6 +11,7 @@ import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
+import "../styles/containers-table-componnent.scss";
 
 const ContainerTable = () => {
   // Constant variables.
@@ -84,29 +85,35 @@ const ContainerTable = () => {
   };
 
   return (
-    <div style={{ display: "block", margin: "center" }}>
+    <div className="Main">
       <h2>containers table</h2>
-      <ToolsBar handelButtonAdd={handelButtonAdd} />
-      {addButton && (
-        <AddForm
-          inputsNames={formInputList}
-          placeholdersNames={tableHeadlist}
-          handelSubmitAdd={handelSubmitAdd}
+      <div className="Table">
+        <div className="ToolsBar">
+         <ToolsBar handelButtonAdd={handelButtonAdd} />
+        </div>
+        <div className="HiddenDivs">
+        {addButton && (
+          <AddForm
+            inputsNames={formInputList}
+            placeholdersNames={tableHeadlist}
+            handelSubmitAdd={handelSubmitAdd}
+          />
+        )}
+        {updatebutton && (
+          <UpdateForm
+            inputsNames={formInputList}
+            handelSubmitUpdate={handelSubmitUpdate}
+            updateData={updateData}
+          />
+        )}
+        </div>
+        <Table
+          head={tableHeadlist}
+          body={data}
+          handelButtonDelete={handelButtonDelete}
+          handelButtonUpdate={handelButtonUpdate}
         />
-      )}
-      {updatebutton && (
-        <UpdateForm
-          inputsNames={formInputList}
-          handelSubmitUpdate={handelSubmitUpdate}
-          updateData={updateData}
-        />
-      )}
-      <Table
-        head={tableHeadlist}
-        body={data}
-        handelButtonDelete={handelButtonDelete}
-        handelButtonUpdate={handelButtonUpdate}
-      />
+      </div>
       <Outlet context={data} />
     </div>
   );
