@@ -83,10 +83,9 @@ const ContainerTable = () => {
     setAddButton(!addButton);
     setUpdatebutton(false);
   };
-
   return (
     <div className="Main">
-      <h2>containers table</h2>
+      <h2>Containers table</h2>
       <div className="Table">
         <div className="ToolsBar">
           <ToolsBar handelButtonAdd={handelButtonAdd} />
