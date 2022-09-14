@@ -1,11 +1,11 @@
 import axios from "axios";
 import { Container } from "../types/containers-table-types";
 
-const mainUrl = "https://containers-controller2.herokuapp.com";
+const mainUrl = "http://localhost:4040";
 
 //All requests from the server to CRUD (create,read,update,delete)- containers.
 export const reqAddContainer = async (data: Container) => {
-  await axios.post(mainUrl + "/containers/add", data);
+  await axios.post("http://localhost:4040/containers/add", data);
 };
 export const reqGetContainers = async () => {
   const values = await axios.get(mainUrl + "/containers/data/all");
