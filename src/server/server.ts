@@ -24,12 +24,6 @@ app.use('/locations', locationsRouter)
 app.use('/containers', containersRouter)
 app.use('/locationshistory', locationsHistoryRouter)
 
-//TODO: delete
-app.get('/data', (_req, res) => {
-  console.log("Processing /data");
-  res.send({message: "Hello world"});
-});
-
 const port = process.env.PORT || 4040;
 app.listen(port, () => {
   console.log('Hosted: http://localhost:' + port);
