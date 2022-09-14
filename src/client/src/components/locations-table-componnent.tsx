@@ -1,50 +1,47 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import {
-  reqGetContainers,
-  reqAddContainer,
-  reqDeleteContainer,
-  reqUpdateContainer,
-} from "../helpers/containers-server-req";
-import { Container } from "../types/containers-types";
 import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
-import "../styles/containers-table-componnent.scss";
+import { Location } from "../types/locations-types";
+import {
+  reqAddLocation,
+  reqDeleteLocation,
+  reqGetLocations,
+  reqUpdateLocation,
+} from "../helpers/locations-server-req";
 
 const LocationsTable = () => {
   // Constant variables.
+  // location_id | lat | lon | port_name | nearest_city
+
   const tableHeadlist: string[] = [
     "id",
-    "model",
-    "quantity",
-    "size",
-    "manufacturing year",
-    "location id",
-    "owner id",
+    "lat",
+    "lon",
+    "port name",
+    "nearest city",
   ];
   const formInputList: string[] = [
-    "container_id",
-    "model",
-    "quantity",
-    "size",
-    "manufacturing_year",
     "location_id",
-    "owner_id",
+    "lat",
+    "lon",
+    "port_name",
+    "nearest_city",
   ];
   // Create states and usestets.
-  const [data, setData] = useState<Container[] | []>([]);
+  const [data, setData] = useState<Location[] | []>([]);
   const [isDelete, setIsDelete] = useState<boolean>(true);
   const [isAdd, setIsAdd] = useState<boolean>(true);
   const [isUpdate, setIsUpdate] = useState<boolean>(false);
   const [addButton, setAddButton] = useState<boolean>(false);
   const [updatebutton, setUpdatebutton] = useState<boolean>(false);
-  const [updateData, setUpdateData] = useState<Container | undefined>();
+  const [updateData, setUpdateData] = useState<Location | undefined>();
 
   // Request from the server for initial data and when delete/add/update happen.
   useEffect(() => {
-    reqGetContainers().then((result) => {
+    reqGetLocations().then((result) => {
       setData(result);
     });
   }, [isDelete, isAdd, isUpdate]);
@@ -54,7 +51,7 @@ const LocationsTable = () => {
     event.preventDefault();
     const data = new FormData(event.target);
     // Server request.
-    await reqAddContainer(Object.fromEntries(data) as unknown as Container);
+    await reqAddLocation(Object.fromEntries(data) as unknown as Location);
     setIsAdd(!isAdd);
   };
   // Submit form data to server for update.
@@ -62,11 +59,11 @@ const LocationsTable = () => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target));
     // Server request.
-    await reqUpdateContainer(data as unknown as Container);
+    await reqUpdateLocation(data as unknown as Location);
     setIsUpdate(!isUpdate);
   };
   // Click on update button.
-  const handelButtonUpdate = async (element: Container) => {
+  const handelButtonUpdate = async (element: Location) => {
     setUpdateData(element);
     setUpdatebutton(!updatebutton);
     setAddButton(false);
@@ -74,7 +71,7 @@ const LocationsTable = () => {
   // Click on delete button.
   const handelButtonDelete = async (id: number) => {
     // Server request.
-    await reqDeleteContainer(id);
+    await reqDeleteLocation(id);
     setIsDelete(!isDelete);
   };
 
@@ -86,7 +83,7 @@ const LocationsTable = () => {
 
   return (
     <div className="Main">
-      <h2>containers table</h2>
+      <h2>locations table</h2>
       <div className="Table">
         <div className="ToolsBar">
           <ToolsBar handelButtonAdd={handelButtonAdd} />

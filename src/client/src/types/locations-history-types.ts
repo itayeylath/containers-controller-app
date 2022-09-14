@@ -5,6 +5,3 @@ export interface LocationHistory {
   location_id: number;
   sock_id: number;
 }
-export interface LocationsHistoryTableProps {
-    locationsHistory: LocationHistory[];
-  }
