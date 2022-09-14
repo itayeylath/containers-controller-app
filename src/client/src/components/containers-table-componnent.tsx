@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import { idText } from "typescript";
+import { Outlet } from "react-router-dom";
 import {
   reqGetContainers,
   reqAddContainer,
@@ -12,9 +11,27 @@ import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
-import UpdataForm from "./update-form-component";
 
 const ContainerTable = () => {
+  // Constant variables.
+  const tableHeadlist: string[] = [
+    "id",
+    "model",
+    "quantity",
+    "size",
+    "manufacturing year",
+    "location id",
+    "owner id",
+  ];
+  const formInputList: string[] = [
+    "container_id",
+    "model",
+    "quantity",
+    "size",
+    "manufacturing_year",
+    "location_id",
+    "owner_id",
+  ];
   // Create states and usestets.
   const [data, setData] = useState<Container[] | []>([]);
   const [isDelete, setIsDelete] = useState<boolean>(true);
@@ -65,17 +82,31 @@ const ContainerTable = () => {
     setAddButton(!addButton);
     setUpdatebutton(false);
   };
-  
-  const tableHeadlist: string[] = ["id", "model", "quantity", "size", "manufacturing year", "location id", "owner id"];
-  const formInputList: string[] = ["container_id", "model", "quantity", "size", "manufacturing_year", "location_id", "owner_id"];
 
   return (
-    <div>
+    <div style={{ display: "block", margin: "center" }}>
       <h2>containers table</h2>
-      <ToolsBar  handelButtonAdd={handelButtonAdd}/>
-      {addButton && <AddForm inputsNames={formInputList} placeholdersNames={tableHeadlist} handelSubmitAdd={handelSubmitAdd}/>}
-      {updatebutton && <UpdateForm inputsNames={formInputList} handelSubmitUpdate={handelSubmitUpdate} updateData={updateData}/>}
-      <Table head={tableHeadlist} body={data} handelButtonDelete={handelButtonDelete} handelButtonUpdate={handelButtonUpdate} />
+      <ToolsBar handelButtonAdd={handelButtonAdd} />
+      {addButton && (
+        <AddForm
+          inputsNames={formInputList}
+          placeholdersNames={tableHeadlist}
+          handelSubmitAdd={handelSubmitAdd}
+        />
+      )}
+      {updatebutton && (
+        <UpdateForm
+          inputsNames={formInputList}
+          handelSubmitUpdate={handelSubmitUpdate}
+          updateData={updateData}
+        />
+      )}
+      <Table
+        head={tableHeadlist}
+        body={data}
+        handelButtonDelete={handelButtonDelete}
+        handelButtonUpdate={handelButtonUpdate}
+      />
       <Outlet context={data} />
     </div>
   );
