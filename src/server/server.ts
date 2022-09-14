@@ -24,7 +24,7 @@ app.use('/locations', locationsRouter)
 app.use('/containers', containersRouter)
 app.use('/locationshistory', locationsHistoryRouter)
 
-const port = process.env.PORT || 4040;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log('Hosted: http://localhost:' + port);
 });
