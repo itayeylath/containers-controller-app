@@ -1,0 +1,106 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 1440px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+}
+
+.container-main-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 24px;
+  gap: 16px;
+
+  width: 233.06px;
+  height: 42.06px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.logo {
+  /* Frame */
+
+  width: 42.06px;
+  height: 42.06px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.logo-pic {
+  width: 42.06px;
+  height: 42.06px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.main-title {
+  width: 127px;
+  height: 33.97px;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 27px 0px 0px;
+
+  width: 989px;
+  height: 46px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 24px 4px;
+
+  width: 216px;
+  height: 52px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
