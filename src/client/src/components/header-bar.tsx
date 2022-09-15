@@ -1,28 +1,45 @@
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../styles/header.scss";
-class HeaderBar extends React.Component {
-  state = {};
+import "../figma-pics/US.png";
+import "../figma-pics/moon.png";
+import "../figma-pics/bell.png";
+import "../figma-pics/Avatar.png";
 
-  render() {
-    return (
-      <div className="header-bar">
+const HeaderBar = () => {
+  return (
+    <div className="nav-bar">
+      <Link className="nav-bar-btn-home-page" to={`/`}>
+        <p className="nav-bar-title-home-page">Home page</p>
+      </Link>
 
-        <div className="nav-bar">
-        <Link to={`/containers`}>containers table</Link>
-        <Link to={`/owners`}>owners table</Link>
-        <Link to={`/locations`}>Location table</Link>
-        <Link to={`/locationsHistory`}>Locations history table</Link>
-        <Link to={`/`}>Home page</Link>
-        </div>
+      <Link className="nav-bar-btn" to={`/containers`}>
+        <p className="nav-bar-title">Containers</p>
+      </Link>
 
-        <div className="action-buttons">
-          action buttons
-        </div>
-        <Outlet />
+      <Link className="nav-bar-btn" to={`/owners`}>
+        <p className="nav-bar-title">Owners</p>
+      </Link>
+
+      <Link className="nav-bar-btn" to={`/locations`}>
+        <p className="nav-bar-title">Location</p>
+      </Link>
+
+      <Link className="nav-bar-btn" to={`/locationsHistory`}>
+        <p className="nav-bar-title">Locations history</p>
+      </Link>
+    
+      {/* TODO: componnent */}
+      <div className="action-buttons">
+        <img className="flag" src="../figma-pics/US.png"/>
+        <img className="dark-mood" src="../figma-pics/moon.png"/>
+        <img className="bell" src="../figma-pics/bell.png"/>
+        <img className="user" src="../figma-pics/Avatar.png"/>
+
       </div>
-    );
-  }
-}
-
+      <Outlet />
+    </div>
+  );
+};
 export default HeaderBar;
+
+//text-decoration: none;
