@@ -36,8 +36,6 @@ const LocationsHistoryTable = () => {
   useEffect(() => {
     reqGetLocationsHistory().then((result) => {
       setData(result);
-      console.log(data);
-      
     });
   }, [isDelete, isAdd, isUpdate]);
   // Submit form data to server for add.

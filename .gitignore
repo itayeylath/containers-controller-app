@@ -7,3 +7,4 @@ how-to-deploy.md
 .env
 /src/client/node_modules
 /src/client/src/.env
+/src/client/build
