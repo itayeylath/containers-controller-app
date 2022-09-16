@@ -1,6 +1,8 @@
 import "../styles/main.scss";
 import alram from "../figma-pics/alram.jpg";
-
+import cloud from "../figma-pics/cloud.png";
+import boat from "../figma-pics/boat.jpg";
+import truck from "../figma-pics/truck.png";
 const Main = () => {
   return (
     <div>
@@ -35,6 +37,21 @@ const Main = () => {
             <img src={alram} className="our-serivces-alaram-pic" />
             <h3 className="our-serivces-h3">On Time</h3>
             <p className="our-serivces-alaram-text">delivery on a schedule that is always on time</p>
+          </div>
+          <div className="our-serivces-boat-container">
+            <img src={boat} className="our-serivces-alaram-pic" />
+            <h3 className="our-serivces-h3">Extensive service</h3>
+            <p className="our-serivces-alaram-text">with a wide range of delivery sam to cross continents</p>
+          </div>
+          <div className="our-serivces-cloud-container">
+            <img src={cloud} className="our-serivces-alaram-pic" />
+            <h3 className="our-serivces-h3">Esecurity guaranteed</h3>
+            <p className="our-serivces-alaram-text">the safety of the goods during delivery is guaranteed</p>
+          </div>
+          <div className="our-serivces-truck-container">
+            <img src={truck} className="our-serivces-alaram-pic" />
+            <h3 className="our-serivces-h3">Esecurity guaranteed</h3>
+            <p className="our-serivces-alaram-text">the safety of the goods during delivery is guaranteed</p>
           </div>
         </div>
       </div>
