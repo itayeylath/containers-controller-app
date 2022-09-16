@@ -1,0 +1,165 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 0px;
+
+  position: absolute;
+  width: 1440px;
+  height: 56px;
+  left: 0px;
+  top: 1290px;
+
+  background: #f5f5f5;
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 0px 24px;
+    gap: 16px;
+
+    width: 720px;
+    height: 24px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    .contact-text {
+      width: 279px;
+      height: 24px;
+
+      /* Light/Typography/Body 1 */
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* identical to box height, or 150% */
+      letter-spacing: 0.15px;
+
+      /* Light/Text/Secondary */
+      color: rgba(58, 53, 65, 0.68);
+    }
+  }
+
+  .action-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 0px 24px 0px 0px;
+    padding-left: -500px;
+    gap: 16px;
+
+    width: 720px;
+    height: 24px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+    .action-button-licence {
+      width: 59px;
+      height: 24px;
+
+      /* Light/Typography/Body 1 */
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* identical to box height, or 150% */
+      letter-spacing: 0.15px;
+
+      color: #3d3d3d;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+    .action-button-licence:hover{
+      color: #7800b1;
+    }
+    .action-button-sitmap {
+      width: 63px;
+      height: 24px;
+
+      /* Light/Typography/Body 1 */
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* identical to box height, or 150% */
+      letter-spacing: 0.15px;
+
+      color: #3d3d3d;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+    .action-button-sitmap:hover{
+      color: #7800b1;
+    }
+
+    .action-button-documentation {
+      width: 63px;
+      height: 24px;
+
+      /* Light/Typography/Body 1 */
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* identical to box height, or 150% */
+      letter-spacing: 0.15px;
+
+      color: #3d3d3d;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+    .action-button-documentation:hover{
+      color: #7800b1;
+    }
+    
+    .action-button-support {
+      width: 63px;
+      height: 24px;
+
+      /* Light/Typography/Body 1 */
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* identical to box height, or 150% */
+      letter-spacing: 0.15px;
+
+      color: #3d3d3d;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+    .action-button-support:hover{
+      color: #7800b1;
+    }
+  }
+}
