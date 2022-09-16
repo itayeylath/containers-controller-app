@@ -120,6 +120,10 @@
   order: 0;
   flex-grow: 0;
 }
+.nav-bar-title-home-page:hover{
+  color: #8c53a7;
+}
+
 .nav-bar-btn {
   text-decoration: none;
   display: flex;
@@ -136,6 +140,7 @@
   order: 0;
   flex-grow: 0;
 }
+
 
 .nav-bar-title {
   width: 141px;
@@ -157,6 +162,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+.nav-bar-title:hover{
+  color: #7800b1;
 }
 
 .action-buttons {
