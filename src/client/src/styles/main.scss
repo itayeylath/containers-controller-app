@@ -192,9 +192,45 @@
     position: absolute;
     width: 277px;
     height: 226px;
-    left: 159px;
-    top: 958px;
-
+    left: -110px;
+    top: -700px;
+    
+    .our-serivces-h3{
+      position: absolute;
+      width: 82px;
+      height: 24px;
+      left: 159px;
+      top: 1082px;
+      
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: capitalize;
+      
+      color: #333333;
+    }
+    .our-serivces-alaram-text{
+      position: absolute;
+      width: 277px;
+      height: 56px;
+      left: 159px;
+      top: 1128px;
+      
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      
+      /* or 156% */
+      text-transform: capitalize;
+      
+      color: #6B6B6B;
+      
+      
+    }
     .our-serivces-alaram-pic {
       position: absolute;
       width: 100px;

@@ -33,8 +33,8 @@ const Main = () => {
           </p>
           <div className="our-serivces-alaram-container">
             <img src={alram} className="our-serivces-alaram-pic" />
-            <p className="">On Time</p>
-            <p className="">delivery on a schedule that is always on time</p>
+            <h3 className="our-serivces-h3">On Time</h3>
+            <p className="our-serivces-alaram-text">delivery on a schedule that is always on time</p>
           </div>
         </div>
       </div>
