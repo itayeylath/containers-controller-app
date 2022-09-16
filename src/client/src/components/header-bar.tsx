@@ -1,9 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import "../styles/header.scss";
 import US from "../figma-pics/US.png";
-import moon from "../figma-pics/moon.png";
-import bell from "../figma-pics/bell.png";
 import Avatar from "../figma-pics/Avatar.png";
+import Moon from "../figma-pics/moon";
+import Bell from "../figma-pics/bell";
 
 const HeaderBar = () => {
   return (
@@ -21,7 +21,7 @@ const HeaderBar = () => {
       </Link>
 
       <Link className="nav-bar-btn" to={`/locations`}>
-        <p className="nav-bar-title">Location</p>
+        <p className="nav-bar-title">Locations</p>
       </Link>
 
       <Link className="nav-bar-btn" to={`/locationsHistory`}>
@@ -32,11 +32,12 @@ const HeaderBar = () => {
       <div className="action-buttons">
         {/* TODO: Fix imgs style */}
         <div className="US-img">
-          <img className="flag" src={US} />
         </div>
+          <img className="flag" src={US} />
 
-        <img className="dark-mood" src={moon} />
-        <img className="bell" src={bell} />
+        <Moon />
+        <Bell />
+
         <img className="user" src={Avatar} />
       </div>
       <Outlet />
@@ -46,3 +47,5 @@ const HeaderBar = () => {
 export default HeaderBar;
 
 //text-decoration: none;
+
+
