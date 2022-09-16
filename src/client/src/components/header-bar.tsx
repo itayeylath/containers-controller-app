@@ -1,9 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import "../styles/header.scss";
-import "../figma-pics/US.png";
-import "../figma-pics/moon.png";
-import "../figma-pics/bell.png";
-import "../figma-pics/Avatar.png";
+import US from "../figma-pics/US.png";
+import moon from "../figma-pics/moon.png";
+import bell from "../figma-pics/bell.png";
+import Avatar from "../figma-pics/Avatar.png";
 
 const HeaderBar = () => {
   return (
@@ -27,14 +27,17 @@ const HeaderBar = () => {
       <Link className="nav-bar-btn" to={`/locationsHistory`}>
         <p className="nav-bar-title">Locations history</p>
       </Link>
-    
+
       {/* TODO: componnent */}
       <div className="action-buttons">
-        <img className="flag" src="../figma-pics/US.png"/>
-        <img className="dark-mood" src="../figma-pics/moon.png"/>
-        <img className="bell" src="../figma-pics/bell.png"/>
-        <img className="user" src="../figma-pics/Avatar.png"/>
+        {/* TODO: Fix imgs style */}
+        <div className="US-img">
+          <img className="flag" src={US} />
+        </div>
 
+        <img className="dark-mood" src={moon} />
+        <img className="bell" src={bell} />
+        <img className="user" src={Avatar} />
       </div>
       <Outlet />
     </div>
