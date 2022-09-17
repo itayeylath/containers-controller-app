@@ -296,12 +296,16 @@
     align-items: flex-start;
     padding: 0px;
     gap: 1px;
+    scroll-behavior: smooth;
 
     position: absolute;
     width: 1132px;
-    // height: 600px;
+  
+    max-height: 800px;
+    
     left: 275px;
     top: 380px;
+   
 
     /* Light/Background/Paper */
     background: #ffffff;
