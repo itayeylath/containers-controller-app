@@ -15,7 +15,6 @@ const Table = (props: TableProps) => {
       {/* Create table header content*/}
       <thead>
         <tr className="table-head-row">
-          <th className="table-th-empty"></th>
           {props.head.map((element: string, index: number) => {
             return (
               <th className="table-th" key={index}>
@@ -34,7 +33,7 @@ const Table = (props: TableProps) => {
         {props.body.map((element: any, index: number) => {
           return (
             <tr className="table-body-row" key={index}>
-              <td className="table-th-empty"><ChackBox/></td>
+
               {props.elementTypes.map((type: any, index: number) => {
                 return <td className="table-body-td" key={index}>{element[type]}</td>;
               })}
