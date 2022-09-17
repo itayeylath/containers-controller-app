@@ -1,3 +1,5 @@
+import ChackBox from "../figma-pics/check-box";
+import Edit from "../figma-pics/edit-icon";
 import "../styles/containers-page.scss";
 interface TableProps {
   head: string[];
@@ -9,13 +11,21 @@ interface TableProps {
 
 const Table = (props: TableProps) => {
   return (
-    <table>
+    <table className="table">
       {/* Create table header content*/}
       <thead>
-        <tr>
+        <tr className="table-head-row">
+          <th className="table-th-empty"></th>
           {props.head.map((element: string, index: number) => {
-            return <th key={index}>{element}</th>;
+            return (
+              <th className="table-th" key={index}>
+                {element}
+              </th>
+              
+            );
           })}
+          <th className="table-th-empty"></th>
+          <th className="table-th-empty"></th>
         </tr>
       </thead>
 
@@ -23,12 +33,14 @@ const Table = (props: TableProps) => {
       <tbody>
         {props.body.map((element: any, index: number) => {
           return (
-            <tr key={index}>
+            <tr className="table-body-row" key={index}>
+              <td className="table-th-empty"><ChackBox/></td>
               {props.elementTypes.map((type: any, index: number) => {
-                return <td key={index}>{element[type]}</td>;
+                return <td className="table-body-td" key={index}>{element[type]}</td>;
               })}
               <td>
                 <button
+                className="table-row-delete"
                   onClick={() => {
                     props.handelButtonDelete(element[props.elementTypes[0]]);
                   }}
@@ -38,11 +50,11 @@ const Table = (props: TableProps) => {
               </td>
               <td>
                 <button
+                className="table-row-update"
                   onClick={() => {
                     props.handelButtonUpdate(element);
                   }}
-                >
-                  Update
+                > <Edit/>
                 </button>
               </td>
             </tr>

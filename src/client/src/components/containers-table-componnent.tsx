@@ -85,12 +85,27 @@ const ContainerTable = () => {
   };
   return (
     <div className="main-table-container">
+
       <div className="main-table-header">
         <p className="main-table-header-text">Containers table</p>
       </div>
-      <ToolsBar handelButtonAdd={handelButtonAdd} />
 
-        <div className="hidden-divs">
+      <div className="main-table-text">
+        <h3 className="">Total users with their roles</h3>
+        <p className="">Find all of your company’s administrator accounts and their associate roles.</p>
+      </div>
+
+      <ToolsBar handelButtonAdd={handelButtonAdd} />
+        <Table
+          head={tableHeadlist}
+          body={data}
+          elementTypes={formInputList}
+          handelButtonDelete={handelButtonDelete}
+          handelButtonUpdate={handelButtonUpdate}
+        />
+     
+
+      <div className="hidden-divs">
           {addButton && (
             <AddForm
               inputsNames={formInputList}
@@ -106,16 +121,6 @@ const ContainerTable = () => {
             />
           )}
         </div>
-
-      <div className="Table">
-        <Table
-          head={tableHeadlist}
-          body={data}
-          elementTypes={formInputList}
-          handelButtonDelete={handelButtonDelete}
-          handelButtonUpdate={handelButtonUpdate}
-        />
-      </div>
       <Outlet context={data} />
     </div>
   );

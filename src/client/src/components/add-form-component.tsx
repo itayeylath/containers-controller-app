@@ -1,5 +1,6 @@
 import IdIcon from "../figma-pics/id-icon";
 import { create2DArray } from "../helpers/add-form-func";
+import "../styles/containers-page.scss";
 
 interface AddFormProps {
   inputsNames: string[];
