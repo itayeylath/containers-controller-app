@@ -15,18 +15,16 @@ interface AddFormProps {
   handelSubmitAdd: any;
 }
 
-const svgArr: any = [<IdIcon/>, <ModelIcon/>, <QuantityIcon/>
-,<SzieIcon/>, <YearIcon/>,<LocationIcon/>,<OwnerIcon/>
-];
 
 const AddForm = (props: AddFormProps) => {
- const arr = create2DArray(props.inputsNames, props.placeholdersNames,svgArr);
+  const svgArr: any = [<IdIcon/>, <ModelIcon/>, <QuantityIcon/>
+  ,<SzieIcon/>, <YearIcon/>,<LocationIcon/>,<OwnerIcon/>
+  ];
+  const arr = create2DArray(props.inputsNames, props.placeholdersNames,svgArr);
   return (
     <div className="add-form">
       <form onSubmit={props.handelSubmitAdd}>
         {arr.map((element: any, index: number) => {
-          console.log(element[2]);
-          
           return (
             <div className="add-row">
               <div className="add-icon">
