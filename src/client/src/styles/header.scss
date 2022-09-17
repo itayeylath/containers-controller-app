@@ -6,9 +6,8 @@
   height: 70px;
   z-index: 5;
 
-
   // border-style: dashed;
-  
+
   background: #ffffff;
 }
 .container-main-title {
@@ -26,59 +25,62 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
-.logo {
-  /* Frame */
-
-  width: 42.06px;
-  height: 42.06px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-.logo-pic {
-  width: 42.06px;
-  height: 42.06px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-.main-title {
-  width: 127px;
-  height: 33.97px;
-
-  font-family: "Ubuntu";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 28px;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  .logo {
+    /* Frame */
+  
+    width: 42.06px;
+    height: 42.06px;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .logo-pic {
+    width: 42.06px;
+    height: 42.06px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .main-title {
+    width: 127px;
+    height: 33.97px;
+  
+    font-family: "Ubuntu";
+    font-style: normal;
+  
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+  
+    color: #000000;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
 }
 .nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:flex-start;
   align-items: center;
-  padding: 0px 27px 0px 0px;
+  padding-left: 80px;
 
-  width: 989px;
+  // padding: 0px 27px 0px 0px;
+
+  // width: 989px;
   height: 46px;
 
   /* Inside auto layout */
-  flex: none;
+  
   order: 1;
   flex-grow: 0;
 }
@@ -89,7 +91,7 @@
   align-items: flex-start;
   padding: 10px 17px;
   gap: 10px;
-
+  align-items: center;
   width: 134px;
   height: 42px;
 
@@ -102,7 +104,7 @@
   width: 100px;
   height: 22px;
 
-  font-family: "Inter";
+  font-family: ineter;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -119,7 +121,7 @@
   order: 0;
   flex-grow: 0;
 }
-.nav-bar-title-home-page:hover{
+.nav-bar-title-home-page:hover {
   color: #8c53a7;
 }
 
@@ -127,11 +129,12 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 10px 17px;
+  // align-items: flex-start;
+  // align-items:flex-start;
+  // padding: 10px 17px;
   gap: 10px;
 
-  width: 134px;
+  width: 150px;
   height: 42px;
 
   /* Inside auto layout */
@@ -140,43 +143,43 @@
   flex-grow: 0;
 }
 
-
 .nav-bar-title {
-  width: 141px;
-  height: 22px;
+  // width: 250px;
+  // height: 25px;
 
-  font-family: "Inter";
+  font-family: ineter;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 
   /* identical to box height */
+
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 
   color: #000000;
 
   /* Inside auto layout */
-  flex: none;
   order: 0;
   flex-grow: 0;
 }
-.nav-bar-title:hover{
+.nav-bar-title:hover {
   color: #7800b1;
 }
 
 .action-buttons {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 8px 24px 4px;
-  padding-left: 100px;
+  // padding: 8px 24px 4px;
+  padding-left: 90px;
 
   width: 216px;
   height: 52px;
-  
 
   /* Inside auto layout */
   flex: none;
@@ -187,14 +190,11 @@
 .flag {
   width: 24px;
   height: 24px;
-  
-  
+
   /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
-
-  
 }
 
 .US-img {
@@ -202,12 +202,12 @@
   flex-direction: row;
   align-items: center;
   padding: 8px;
-  
+
   width: 40px;
   height: 40px;
-  
+
   border-radius: 48px;
-  
+
   /* Inside auto layout */
   flex: none;
   order: 0;

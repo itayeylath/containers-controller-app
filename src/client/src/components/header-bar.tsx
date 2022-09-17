@@ -31,9 +31,8 @@ const HeaderBar = () => {
       {/* TODO: componnent */}
       <div className="action-buttons">
         {/* TODO: Fix imgs style */}
-        <div className="US-img">
-        </div>
-          <img className="flag" src={US} />
+
+        <img className="flag" src={US} />
 
         <Moon />
         <Bell />
@@ -47,5 +46,3 @@ const HeaderBar = () => {
 export default HeaderBar;
 
 //text-decoration: none;
-
-

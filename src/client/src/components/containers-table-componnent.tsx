@@ -85,7 +85,9 @@ const ContainerTable = () => {
   };
   return (
     <div className="main-table-container">
-      <h2>Containers table</h2>
+      <div className="main-table-header">
+        <p className="main-table-header-text">Containers table</p>
+      </div>
       <div className="Table">
         <div className="ToolsBar">
           <ToolsBar handelButtonAdd={handelButtonAdd} />
