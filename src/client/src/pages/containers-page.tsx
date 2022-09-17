@@ -5,7 +5,7 @@ import Header from "../components/header-componnent";
 
 const ContainersPage = () => {
     return (
-      <div>
+      <div className="home-page">
         <Header/>
         <ContainerTable/>
         <Footer/>

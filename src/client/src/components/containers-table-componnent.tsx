@@ -11,7 +11,7 @@ import AddForm from "./add-form-component";
 import Table from "./table-componnent";
 import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
-import "../styles/containers-table-componnent.scss";
+import "../styles/containers-page.scss";
 
 const ContainerTable = () => {
   // Constant variables.
@@ -84,7 +84,7 @@ const ContainerTable = () => {
     setUpdatebutton(false);
   };
   return (
-    <div className="Main">
+    <div className="main-table-container">
       <h2>Containers table</h2>
       <div className="Table">
         <div className="ToolsBar">

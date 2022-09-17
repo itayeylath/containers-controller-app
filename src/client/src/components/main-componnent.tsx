@@ -5,7 +5,7 @@ import boat from "../figma-pics/boat.jpg";
 import truck from "../figma-pics/truck.png";
 const Main = () => {
   return (
-    <div>
+    <div className="main-container">
       {/* //TODO: component */}
       <div className="main-container-pic">
         <h2 className="main-h2-text">The largest premium logistic service</h2>

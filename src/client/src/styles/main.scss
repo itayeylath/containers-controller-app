@@ -1,390 +1,398 @@
-.main-container-pic {
-  position: absolute;
-  width: 1440px;
-  height: 558px;
-  left: 0px;
-  top: 70px;
+.main-container {
+  // position: absolute;
+  // margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
 
-  background: url(../figma-pics/containers-pic.png);
-  box-shadow: 0px 8px 20px -5px rgba(61, 61, 61, 0.45);
-  border-radius: 0px 0px 0px 50px;
-
-  .main-h2-text {
+  .main-container-pic {
     position: absolute;
-    width: 683px;
-    height: 46px;
-    left: 726px;
-    top: 80px;
+    width: 1440px;
+    height: 558px;
+    left: 0px;
+    top: 70px;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 46px;
+    background: url(../figma-pics/containers-pic.png);
+    box-shadow: 0px 8px 20px -5px rgba(61, 61, 61, 0.45);
+    border-radius: 0px 0px 0px 50px;
 
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.015em;
+    .main-h2-text {
+      position: absolute;
+      width: 683px;
+      height: 46px;
+      left: 726px;
+      top: 80px;
 
-    color: rgba(130, 19, 183, 0.8944);
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 46px;
+
+      /* identical to box height */
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.015em;
+
+      color: rgba(130, 19, 183, 0.8944);
+    }
+
+    .main-h2-p-text {
+      position: absolute;
+      width: 683px;
+      height: 46px;
+      left: 755px;
+      top: 135px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      display: flex;
+      align-items: center;
+
+      color: #3b393c;
+    }
+
+    .get-started-container {
+      position: absolute;
+      width: 193px;
+      height: 60px;
+      left: 30px;
+      top: -70px;
+    }
+    .get-started-text {
+      position: absolute;
+      width: 193px;
+      height: 60px;
+      left: 40px;
+      top: -0px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+
+      /* identical to box height, or 175% */
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+
+    .get-started-rectangle {
+      position: absolute;
+      width: 193px;
+      height: 60px;
+      left: 728px;
+      top: 300px;
+
+      background: #a657cc;
+      border-radius: 8px;
+    }
+
+    .get-started-rectangle:hover {
+      background: #8c53a7;
+    }
+
+    .learn-more-text {
+      position: absolute;
+      width: 116px;
+      height: 28px;
+      left: 958px;
+      top: 295px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+
+      /* identical to box height, or 156% */
+      text-decoration-line: underline;
+
+      color: #3b393c;
+    }
+
+    .learn-more-text:hover {
+      color: #7800b1;
+    }
   }
 
-  .main-h2-p-text {
+  .marketing-text {
     position: absolute;
-    width: 683px;
-    height: 46px;
-    left: 755px;
-    top: 135px;
+    width: 996px;
+    height: 137px;
+    left: 259px;
+    top: 610px;
 
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 28px;
+    line-height: 34px;
     display: flex;
     align-items: center;
 
     color: #3b393c;
   }
 
-  .get-started-container {
+  .our-serivces-container {
     position: absolute;
-    width: 193px;
-    height: 60px;
-    left: 30px;
-    top: -70px;
-  }
-  .get-started-text {
-    position: absolute;
-    width: 193px;
-    height: 60px;
-    left: 40px;
-    top: -0px;
+    width: 1200px;
+    height: 422px;
+    left: 159px;
+    top: 730px;
 
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 28px;
-
-    /* identical to box height, or 175% */
-    text-transform: uppercase;
-
-    color: #ffffff;
-  }
-
-  .get-started-rectangle {
-    position: absolute;
-    width: 193px;
-    height: 60px;
-    left: 728px;
-    top: 300px;
-
-    background: #a657cc;
-    border-radius: 8px;
-  }
-
-  .get-started-rectangle:hover {
-    background: #8c53a7;
-  }
-
-  .learn-more-text {
-    position: absolute;
-    width: 116px;
-    height: 28px;
-    left: 958px;
-    top: 295px;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-
-    /* identical to box height, or 156% */
-    text-decoration-line: underline;
-
-    color: #3b393c;
-  }
-
-  .learn-more-text:hover {
-    color: #7800b1;
-  }
-}
-
-.marketing-text {
-  position: absolute;
-  width: 996px;
-  height: 137px;
-  left: 259px;
-  top: 629px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
-
-  color: #3b393c;
-}
-
-.our-serivces-container {
-  position: absolute;
-  width: 1200px;
-  height: 422px;
-  left: 159px;
-  top: 762px;
-
-  .our-serivces-h2 {
-    position: absolute;
-    width: 227px;
-    height: 46px;
-    left: 20px;
-    top: 0px;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 38px;
-    line-height: 46px;
-
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.015em;
-
-    color: rgba(130, 19, 183, 0.8944);
-  }
-
-  .our-serivces-text {
-    position: absolute;
-    width: 600px;
-    height: 64px;
-    left: 20px;
-    top: 100px;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-
-    /* or 178% */
-    text-transform: capitalize;
-
-    color: #3d3d3d;
-  }
-
-  .our-serivces-retangle {
-    position: absolute;
-    width: 75px;
-    height: 8px;
-    left: 20px;
-    top: 100px;
-
-    background: #9acfeb;
-  }
-
-  .our-serivces-alaram-container {
-    position: absolute;
-    width: 277px;
-    height: 226px;
-    left: -150px;
-    top: -700px;
-    
-    .our-serivces-h3{
+    .our-serivces-h2 {
       position: absolute;
-      width: 82px;
-      height: 24px;
-      left: 159px;
-      top: 1082px;
-      
-      font-family: 'Inter';
+      width: 227px;
+      height: 46px;
+      left: 20px;
+      top: 0px;
+
+      font-family: "Inter";
       font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: capitalize;
-      
-      color: #333333;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 46px;
+
+      /* identical to box height */
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.015em;
+
+      color: rgba(130, 19, 183, 0.8944);
     }
-    .our-serivces-alaram-text{
+
+    .our-serivces-text {
       position: absolute;
-      width: 277px;
-      height: 56px;
-      left: 159px;
-      top: 1128px;
-      
-      font-family: 'Inter';
+      width: 600px;
+      height: 64px;
+      left: 20px;
+      top: 100px;
+
+      font-family: "Inter";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
-      line-height: 28px;
-      
-      /* or 156% */
-      text-transform: capitalize;
-      
-      color: #6B6B6B;
-    }
-    .our-serivces-alaram-pic {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 159px;
-      top: 958px;
-    }
-  }
+      line-height: 32px;
 
-  .our-serivces-boat-container {
-    position: absolute;
-    width: 277px;
-    height: 226px;
-    left: 130px;
-    top: -700px;
-    
-    .our-serivces-h3{
-      position: absolute;
-      width: 175px;
-      height: 24px;
-      left: 159px;
-      top: 1082px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
+      /* or 178% */
       text-transform: capitalize;
-      
-      color: #333333;
+
+      color: #3d3d3d;
     }
-    .our-serivces-alaram-text{
+
+    .our-serivces-retangle {
+      position: absolute;
+      width: 75px;
+      height: 8px;
+      left: 20px;
+      top: 100px;
+
+      background: #9acfeb;
+    }
+
+    .our-serivces-alaram-container {
       position: absolute;
       width: 277px;
-      height: 56px;
-      left: 159px;
-      top: 1128px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-      
-      /* or 156% */
-      text-transform: capitalize;
-      
-      color: #6B6B6B;
-    }
-    .our-serivces-alaram-pic {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 159px;
-      top: 958px;
-    }
-  }
+      height: 226px;
+      left: -150px;
+      top: -700px;
 
-  .our-serivces-cloud-container {
-    position: absolute;
-    width: 277px;
-    height: 226px;
-    left: 460px;
-    top: -700px;
-    
-    .our-serivces-h3{
-      position: absolute;
-      width: 250px;
-      height: 24px;
-      left: 159px;
-      top: 1082px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: capitalize;
-      
-      color: #333333;
+      .our-serivces-h3 {
+        position: absolute;
+        width: 82px;
+        height: 24px;
+        left: 159px;
+        top: 1082px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: capitalize;
+
+        color: #333333;
+      }
+      .our-serivces-alaram-text {
+        position: absolute;
+        width: 277px;
+        height: 56px;
+        left: 159px;
+        top: 1128px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        /* or 156% */
+        text-transform: capitalize;
+
+        color: #6b6b6b;
+      }
+      .our-serivces-alaram-pic {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 159px;
+        top: 958px;
+      }
     }
-    .our-serivces-alaram-text{
+
+    .our-serivces-boat-container {
       position: absolute;
       width: 277px;
-      height: 56px;
-      left: 159px;
-      top: 1128px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-      
-      /* or 156% */
-      text-transform: capitalize;
-      
-      color: #6B6B6B;
-    }
-    .our-serivces-alaram-pic {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 159px;
-      top: 958px;
-    }
-  }
+      height: 226px;
+      left: 130px;
+      top: -700px;
 
-  .our-serivces-truck-container {
-    position: absolute;
-    width: 277px;
-    height: 226px;
-    left: 760px;
-    top: -700px;
-    
-    .our-serivces-h3{
-      position: absolute;
-      width: 250px;
-      height: 24px;
-      left: 159px;
-      top: 1082px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: capitalize;
-      
-      color: #333333;
+      .our-serivces-h3 {
+        position: absolute;
+        width: 175px;
+        height: 24px;
+        left: 159px;
+        top: 1082px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: capitalize;
+
+        color: #333333;
+      }
+      .our-serivces-alaram-text {
+        position: absolute;
+        width: 277px;
+        height: 56px;
+        left: 159px;
+        top: 1128px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        /* or 156% */
+        text-transform: capitalize;
+
+        color: #6b6b6b;
+      }
+      .our-serivces-alaram-pic {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 159px;
+        top: 958px;
+      }
     }
-    .our-serivces-alaram-text{
+
+    .our-serivces-cloud-container {
       position: absolute;
       width: 277px;
-      height: 56px;
-      left: 159px;
-      top: 1128px;
-      
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-      
-      /* or 156% */
-      text-transform: capitalize;
-      
-      color: #6B6B6B;
+      height: 226px;
+      left: 460px;
+      top: -700px;
+
+      .our-serivces-h3 {
+        position: absolute;
+        width: 250px;
+        height: 24px;
+        left: 159px;
+        top: 1082px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: capitalize;
+
+        color: #333333;
+      }
+      .our-serivces-alaram-text {
+        position: absolute;
+        width: 277px;
+        height: 56px;
+        left: 159px;
+        top: 1128px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        /* or 156% */
+        text-transform: capitalize;
+
+        color: #6b6b6b;
+      }
+      .our-serivces-alaram-pic {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 159px;
+        top: 958px;
+      }
     }
-    .our-serivces-alaram-pic {
+
+    .our-serivces-truck-container {
       position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 159px;
-      top: 958px;
+      width: 277px;
+      height: 226px;
+      left: 760px;
+      top: -700px;
+
+      .our-serivces-h3 {
+        position: absolute;
+        width: 250px;
+        height: 24px;
+        left: 159px;
+        top: 1082px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: capitalize;
+
+        color: #333333;
+      }
+      .our-serivces-alaram-text {
+        position: absolute;
+        width: 277px;
+        height: 56px;
+        left: 159px;
+        top: 1128px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        /* or 156% */
+        text-transform: capitalize;
+
+        color: #6b6b6b;
+      }
+      .our-serivces-alaram-pic {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 159px;
+        top: 958px;
+      }
     }
   }
 }
