@@ -1,3 +1,4 @@
+import "../styles/containers-page.scss";
 interface TableProps {
   head: string[];
   body: any;

@@ -88,11 +88,9 @@ const ContainerTable = () => {
       <div className="main-table-header">
         <p className="main-table-header-text">Containers table</p>
       </div>
-      <div className="Table">
-        <div className="ToolsBar">
-          <ToolsBar handelButtonAdd={handelButtonAdd} />
-        </div>
-        <div className="HiddenDivs">
+      <ToolsBar handelButtonAdd={handelButtonAdd} />
+
+        <div className="hidden-divs">
           {addButton && (
             <AddForm
               inputsNames={formInputList}
@@ -108,6 +106,8 @@ const ContainerTable = () => {
             />
           )}
         </div>
+
+      <div className="Table">
         <Table
           head={tableHeadlist}
           body={data}
