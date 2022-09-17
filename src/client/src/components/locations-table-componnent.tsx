@@ -11,6 +11,7 @@ import {
   reqGetLocations,
   reqUpdateLocation,
 } from "../helpers/locations-server-req";
+import "../styles/containers-page.scss";
 
 const LocationsTable = () => {
   // Constant variables.
@@ -82,13 +83,28 @@ const LocationsTable = () => {
   };
 
   return (
-    <div className="Main">
-      <h2>locations table</h2>
-      <div className="Table">
-        <div className="ToolsBar">
+    <div className="main-table-container">
+
+      <div className="main-table-header">
+        <p className="main-table-header-text">Locations table</p>
+      </div>
+
+      <div className="main-table-text">
+        <h3 className="">Total locations</h3>
+        <p className="">Find all of your locations data.</p>
+      </div>
+
           <ToolsBar handelButtonAdd={handelButtonAdd} />
-        </div>
-        <div className="HiddenDivs">
+
+          <Table
+            head={tableHeadlist}
+            body={data}
+            elementTypes={formInputList}
+            handelButtonDelete={handelButtonDelete}
+            handelButtonUpdate={handelButtonUpdate}
+          />
+
+        <div className="hidden-divs">
           {addButton && (
             <AddForm
               inputsNames={formInputList}
@@ -104,14 +120,7 @@ const LocationsTable = () => {
             />
           )}
         </div>
-        <Table
-          head={tableHeadlist}
-          body={data}
-          elementTypes={formInputList}
-          handelButtonDelete={handelButtonDelete}
-          handelButtonUpdate={handelButtonUpdate}
-        />
-      </div>
+     
       <Outlet context={data} />
     </div>
   );

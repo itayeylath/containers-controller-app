@@ -11,6 +11,7 @@ import {
   reqUpdateOwner,
 } from "../helpers/owners-server-req";
 import { Owner } from "../types/owners-types";
+import "../styles/containers-page.scss";
 
 const OwnersTable = () => {
   // Constant variables.
@@ -65,13 +66,28 @@ const OwnersTable = () => {
   };
 
   return (
-    <div className="Main">
-      <h2>Owners table</h2>
-      <div className="Table">
-        <div className="ToolsBar">
-          <ToolsBar handelButtonAdd={handelButtonAdd} />
-        </div>
-        <div className="HiddenDivs">
+    <div className="main-table-container">
+
+      <div className="main-table-header">
+        <p className="main-table-header-text">Owners table</p>
+      </div>
+
+      <div className="main-table-text">
+        <h3 className="">Total owners</h3>
+        <p className="">Find all of your owners data.</p>
+      </div>
+     
+        <ToolsBar handelButtonAdd={handelButtonAdd} />
+
+        <Table
+          head={tableHeadlist}
+          body={data}
+          elementTypes={formInputList}
+          handelButtonDelete={handelButtonDelete}
+          handelButtonUpdate={handelButtonUpdate}
+        />
+
+      <div className="hidden-divs">
           {addButton && (
             <AddForm
               inputsNames={formInputList}
@@ -86,14 +102,6 @@ const OwnersTable = () => {
               updateData={updateData}
             />
           )}
-        </div>
-        <Table
-          head={tableHeadlist}
-          body={data}
-          elementTypes={formInputList}
-          handelButtonDelete={handelButtonDelete}
-          handelButtonUpdate={handelButtonUpdate}
-        />
       </div>
       <Outlet context={data} />
     </div>

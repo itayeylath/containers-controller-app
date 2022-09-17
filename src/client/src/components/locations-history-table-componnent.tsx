@@ -6,6 +6,7 @@ import ToolsBar from "./tools-bar-componnent";
 import UpdateForm from "./update-form-component";
 import { LocationHistory } from "../types/locations-history-types";
 import { reqAddLocationsHistory, reqDeleteLocationHistory, reqGetLocationsHistory, reqUpdateLocationHistory } from "../helpers/locations-history-server-req";
+import "../styles/containers-page.scss";
 
 const LocationsHistoryTable = () => {
   // Constant variables.
@@ -73,13 +74,29 @@ const LocationsHistoryTable = () => {
   };
 
   return (
-    <div className="Main">
-      <h2>Location history table</h2>
-      <div className="Table">
-        <div className="ToolsBar">
-          <ToolsBar handelButtonAdd={handelButtonAdd} />
-        </div>
-        <div className="HiddenDivs">
+    <div className="main-table-container">
+
+      <div className="main-table-header">
+        <p className="main-table-header-text">Locations history table</p>
+      </div>
+
+      <div className="main-table-text">
+        <h3 className="">Total locations history</h3>
+        <p className="">Find all of your locations history data.</p>
+      </div>
+
+      <ToolsBar handelButtonAdd={handelButtonAdd} />
+      
+        <Table
+          head={tableHeadlist}
+          body={data}
+          elementTypes={formInputList}
+          handelButtonDelete={handelButtonDelete}
+          handelButtonUpdate={handelButtonUpdate}
+        />
+     
+
+      <div className="hidden-divs">
           {addButton && (
             <AddForm
               inputsNames={formInputList}
@@ -95,14 +112,6 @@ const LocationsHistoryTable = () => {
             />
           )}
         </div>
-        <Table
-          head={tableHeadlist}
-          body={data}
-          elementTypes={formInputList}
-          handelButtonDelete={handelButtonDelete}
-          handelButtonUpdate={handelButtonUpdate}
-        />
-      </div>
       <Outlet context={data} />
     </div>
   );

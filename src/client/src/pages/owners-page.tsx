@@ -4,7 +4,7 @@ import OwnersTable from "../components/owners-table-componnent";
 
 const OwnersPage = () => {
     return (
-      <div>
+      <div className="home-page">
         <Header/>
         <OwnersTable />
         <Footer/>

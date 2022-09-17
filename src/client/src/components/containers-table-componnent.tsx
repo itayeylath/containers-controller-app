@@ -91,11 +91,12 @@ const ContainerTable = () => {
       </div>
 
       <div className="main-table-text">
-        <h3 className="">Total users with their roles</h3>
-        <p className="">Find all of your company’s administrator accounts and their associate roles.</p>
+        <h3 className="">Total containers</h3>
+        <p className="">Find all of your containers data.</p>
       </div>
 
       <ToolsBar handelButtonAdd={handelButtonAdd} />
+      
         <Table
           head={tableHeadlist}
           body={data}

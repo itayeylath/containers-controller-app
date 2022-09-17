@@ -4,7 +4,7 @@ import LocationsTable from "../components/locations-table-componnent";
 
 const LocationsPage = () => {
     return (
-      <div>
+      <div className="home-page">
         <Header/>
         <LocationsTable />
         <Footer/>

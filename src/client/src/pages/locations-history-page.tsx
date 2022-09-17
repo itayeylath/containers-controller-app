@@ -4,7 +4,7 @@ import LocationsHistoryTable from "../components/locations-history-table-componn
 
 const LocationsHistoryPage = () => {
     return (
-      <div>
+      <div className="home-page">
         <Header/>
         <LocationsHistoryTable />
         <Footer/>
