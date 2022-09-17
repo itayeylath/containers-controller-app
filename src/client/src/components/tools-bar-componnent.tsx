@@ -10,7 +10,7 @@ const ToolsBar = (props: ToolsBarProps) => {
     
       <button className="add-btn-container" onClick={props.handelButtonAdd}>
         <Edit />
-        <p className="add-btn-text">EDIT TABLE</p>
+        <p className="add-btn-text">ADD ITEM</p>
         <img src={arrow} />
       </button>
     
