@@ -86,7 +86,7 @@ const LocationsTable = () => {
     <div className="main-table-container">
 
       <div className="main-table-header">
-        <p className="main-table-header-text">Locations table</p>
+        <p className="main-table-header-text">Locations</p>
       </div>
 
       <div className="main-table-text">

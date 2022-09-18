@@ -69,7 +69,7 @@ const OwnersTable = () => {
     <div className="main-table-container">
 
       <div className="main-table-header">
-        <p className="main-table-header-text">Owners table</p>
+        <p className="main-table-header-text">Owners</p>
       </div>
 
       <div className="main-table-text">

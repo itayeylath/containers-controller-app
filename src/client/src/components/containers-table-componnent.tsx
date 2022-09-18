@@ -87,7 +87,7 @@ const ContainerTable = () => {
     <div className="main-table-container">
 
       <div className="main-table-header">
-        <p className="main-table-header-text">Containers table</p>
+        <p className="main-table-header-text">Containers</p>
       </div>
 
       <div className="main-table-text">
