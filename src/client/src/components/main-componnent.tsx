@@ -27,7 +27,7 @@ const Main = () => {
           market, making efficient container management indispensable.
         </p>
         <div className="our-serivces-container">
-          <p className="our-serivces-h2">Our serivces</p>
+          <p className="our-serivces-h2">Our services</p>
           <div className="our-serivces-retangle"></div>
           <p className="our-serivces-text">
             Logistics activities themselves aim to provide the right goods at
