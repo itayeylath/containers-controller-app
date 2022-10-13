@@ -40,30 +40,18 @@ My goal in the project is-
 ### Front-end
 (TypesScript ,React, Scss, Figma HTML)
 
-<img src="readme-pics/ts.png" width="100" hight="150">
-<img src="readme-pics/react.png" width="100" hight="150">
-<img src="readme-pics/sass.png" width="100" hight="150">
-<img src="readme-pics/figma.png" width="100" hight="150">
-<img src="readme-pics/html.png" width="100" hight="150">
+<img src="readme-pics/ts.png" width="100" hight="150"><img src="readme-pics/react.png" width="100" hight="150"><img src="readme-pics/sass.png" width="100" hight="150"><img src="readme-pics/figma.png" width="100" hight="150"><img src="readme-pics/html.png" width="100" hight="150">
 
 
 ### Back-end
 (TypesScript, Nodejs, Express, Postgresql, Postman)
 
-<img src="readme-pics/ts.png" width="100" hight="150">
-<img src="readme-pics/nodejs.png" width="100" hight="150">
-<img src="readme-pics/express-js.png" width="100" hight="150">
-<img src="readme-pics/postgresql.png" width="100" hight="150">
-<img src="readme-pics/postman.png" width="100" hight="150">
+<img src="readme-pics/ts.png" width="100" hight="150"><img src="readme-pics/nodejs.png" width="100" hight="150"><img src="readme-pics/express-js.png" width="100" hight="150"><img src="readme-pics/postgresql.png" width="100" hight="150"><img src="readme-pics/postman.png" width="100" hight="150">
 
 ### Misc
 (Linux-ubuntu, Bash, Git, Heroku)
 
-<img src="readme-pics/linux.png" width="100" hight="150">
-<img src="readme-pics/ubuntu.png" width="100" hight="150">
-<img src="readme-pics/terminal-bash.png" width="100" hight="150">
-<img src="readme-pics/git.png" width="100" hight="150">
-<img src="readme-pics/heroku.png" width="100" hight="150">
+<img src="readme-pics/linux.png" width="100" hight="150"><img src="readme-pics/ubuntu.png" width="100" hight="150"><img src="readme-pics/terminal-bash.png" width="100" hight="150"><img src="readme-pics/git.png" width="100" hight="150"><img src="readme-pics/heroku.png" width="100" hight="150">
 
 
 
