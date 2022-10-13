@@ -104,7 +104,11 @@ const ContainerTable = () => {
           handelButtonDelete={handelButtonDelete}
           handelButtonUpdate={handelButtonUpdate}
         />
-     
+     <AddForm
+              inputsNames={formInputList}
+              placeholdersNames={tableHeadlist}
+              handelSubmitAdd={handelSubmitAdd}
+            />
 
       <div className="hidden-divs">
           {addButton && (
