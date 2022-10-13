@@ -14,8 +14,6 @@ Eager to learn and achieve great accomplishments in the industry.
 ## About the project
 <b>so, why did I choose to do this project?</b>
 
-I choose this project to implement my abilitys.
-
 I chose to do the project to implement my technological abilities as a full stack developer (the technologies I chose to use are shown below).
 
 My goal in the project is-
