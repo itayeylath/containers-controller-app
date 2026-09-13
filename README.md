@@ -7,7 +7,6 @@
 Where are they, who owns them and more...
 
 ## About me
-A combat officer (former) in the IDF.
 Highly motivated junior full stack developer. 
 Eager to learn and achieve great accomplishments in the industry.
 
